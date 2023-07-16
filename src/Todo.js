@@ -4,8 +4,12 @@ class Todo extends Component {
     render(){
         return(
             <div>
-                <h1>task of the todo</h1>
+                <button>Edit</button>
+                <button>X</button>
+                <li>{this.props.task}</li>
             </div>
         )
     }
 }
+
+export default Todo;
