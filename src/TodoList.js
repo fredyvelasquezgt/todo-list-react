@@ -53,7 +53,7 @@ class TodoList extends Component {
             removeTodo={this.remove} 
             updateTodo={this.updateTodo}
             completed={todo.completed}
-            toggletTodo={this.toggleCompletion} />
+            toggleTodo={this.toggleCompletion} />
         })
         return (
             <div>
