@@ -5,11 +5,12 @@ class Todo extends Component {
         super(props);
         this.state = {
             isEditing: false, 
-            task: ''
+            task: this.props.task
         }
         this.handleRemove = this.handleRemove.bind(this)
         this.toggleForm = this.toggleForm.bind(this)
         this.handleChange = this.handleChange.bind(this)
+        this.handleUpdate = this.handleUpdate.bind(this)
     }
 
     handleRemove() {
@@ -22,6 +23,7 @@ class Todo extends Component {
 
     handleUpdate(evt) {
         evt.preventDefault();
+        this.props.updateTodo(this.props.id, this.state.task)
     }
 
     handleChange(evt) {
